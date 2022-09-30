@@ -1,3 +1,14 @@
+# Deprecation Warning
+The `symopsio/sso-connector/sym` module is deprecated as of September 30, 2022. Please migrate to `symopsio/sso-connector/aws`. This can be done in your module declarations by replacing the `symopsio/sso-connector/sym` source argument with `symopsio/sso-connector/aws`.
+
+```
+module "sso_connector" {
+  source  = "symopsio/sso-connector/aws"
+  version = ">= 1.1.0"
+  # insert the 2 required variables here
+}
+```
+
 # sso-connector
 
 The `sso-connector` module provisions an IAM role that the [AWS SSO Strategy](https://docs.symops.com/docs/aws-sso) can use to escalate or de-escalate users in SSO Instances.
